@@ -6,7 +6,9 @@ NULLABLE = {'null': True, 'blank': True}
 
 
 class Habit(models.Model):
-    """Модель привычки"""
+    """
+    Модель привычки
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE, **NULLABLE, verbose_name='Пользователь')
     place = models.CharField(max_length=255, **NULLABLE, verbose_name='Место')
     time = models.TimeField(**NULLABLE, verbose_name='Время')

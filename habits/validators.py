@@ -5,7 +5,9 @@ from habits.models import Habit
 
 
 class ValidateActionTime:
-    """Валидация времени действия"""
+    """
+    Валидация времени действия
+    """
 
     def __init__(self, field):
         self.field = field
@@ -21,7 +23,9 @@ class ValidateActionTime:
 
 
 class ValidatePeriodicity:
-    """Валидация периодичности"""
+    """
+    Валидация периодичности
+    """
 
     def __init__(self, field):
         self.field = field
@@ -37,7 +41,9 @@ class ValidatePeriodicity:
 
 
 class ValidateAssociatedHabitOrReward:
-    """Валидация связанной привычки или награды"""
+    """
+    Валидация связанной привычки или награды
+    """
 
     def __init__(self, field1, field2):
         self.field1 = field1
@@ -49,7 +55,9 @@ class ValidateAssociatedHabitOrReward:
 
 
 class ValidateAssociatedHabit:
-    """Валидация связанной привычки"""
+    """
+    Валидация связанной привычки
+    """
 
     def __call__(self, value):
         if value.get('associated_habit') is None:
@@ -61,7 +69,9 @@ class ValidateAssociatedHabit:
 
 
 class ValidatePleasantHabit:
-    """Валидация приятной привычки"""
+    """
+    Валидация приятной привычки
+    """
 
     def __init__(self, field1, field2, field3):
         self.field1 = field1

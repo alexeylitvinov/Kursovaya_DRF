@@ -27,16 +27,22 @@ class UserCreateAPIView(CreateAPIView):
 
 class UserAPIView(APIView):
     """
-    Просмотр профиля пользователя
+    Профиль пользователя
     """
     permission_classes = (IsAuthenticated, IsUser)
 
     def get(self, request):
+        """
+        Просмотр профиля пользователя
+        """
         user = request.user
         serializer = UserDetailSerializer(user)
         return Response(serializer.data)
 
     def patch(self, request):
+        """
+        Обновление профиля пользователя
+        """
         user = request.user
         serializer = UserUpdateSerializer(user, data=request.data)
         if serializer.is_valid():

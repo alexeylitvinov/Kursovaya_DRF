@@ -6,7 +6,9 @@ from habits.validators import ValidateActionTime, ValidatePeriodicity, ValidateA
 
 
 class HabitSerializer(serializers.ModelSerializer):
-    """Сериализатор модели привычка"""
+    """
+    Сериализатор модели привычка
+    """
 
     class Meta:
         model = Habit
