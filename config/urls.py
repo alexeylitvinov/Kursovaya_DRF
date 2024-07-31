@@ -6,7 +6,7 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="DRF_Homework",
+        title="DRF_Kursovaya",
         default_version='v1',
         description="My API documentation",
         terms_of_service="https://www.google.com/policies/terms/",
